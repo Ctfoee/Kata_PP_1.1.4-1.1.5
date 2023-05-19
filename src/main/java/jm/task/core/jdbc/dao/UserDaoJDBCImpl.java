@@ -11,7 +11,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     private long userId = 0;
 
-    Connection connection;
+    private final Connection connection;
 
     {
         try {
