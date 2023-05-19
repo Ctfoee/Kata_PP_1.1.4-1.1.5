@@ -42,7 +42,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void dropUsersTable() {
-        String query = "DROP TABLE Users";
+        String query = "DROP TABLE IF EXISTS Users";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.execute();
         } catch (SQLException ignore) {}
@@ -78,7 +78,10 @@ public class UserDaoJDBCImpl implements UserDao {
             List<User> userList = new ArrayList<>();
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                User user = new User(resultSet.getString(2), resultSet.getString(3), resultSet.getByte(4));
+                User user = new User();
+                user.setName(resultSet.getString(2));
+                user.setLastName(resultSet.getString(3));
+                user.setAge(resultSet.getByte(4));
                 user.setId(resultSet.getLong(1));
                 userList.add(user);
             }
