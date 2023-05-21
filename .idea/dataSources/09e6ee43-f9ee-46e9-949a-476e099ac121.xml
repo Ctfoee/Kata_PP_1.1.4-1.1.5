@@ -1809,24 +1809,21 @@ User</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="418" parent="335" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="419" parent="335" name="name">
-      <DasType>varchar(45)|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="419" parent="335" name="age">
+      <DasType>tinyint|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="420" parent="335" name="lastName">
-      <DasType>varchar(45)|0s</DasType>
-      <NotNull>1</NotNull>
+      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="421" parent="335" name="age">
-      <DasType>tinyint|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="421" parent="335" name="name">
+      <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
     <index id="422" parent="335" name="PRIMARY">
@@ -1834,18 +1831,10 @@ User</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="423" parent="335" name="id_UNIQUE">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="424" parent="335" name="PRIMARY">
+    <key id="423" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="425" parent="335" name="id_UNIQUE">
-      <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

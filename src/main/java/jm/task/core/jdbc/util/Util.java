@@ -13,7 +13,7 @@ import java.util.Properties;
 public class Util {
     private static final String URL = "jdbc:mysql://localhost:3306/users";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = ""; //Здесь должен быть пароль от БД
+    private static final String PASSWORD = "Ghtyjhkl,[30]"; //Здесь должен быть пароль от БД
 
     public static SessionFactory getSessionFactory() {
         Properties properties = new Properties();
